@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ASD Benchmark Assessment - Cloud Bubble Design System
+Calm, modern, PISA-style with soft pastels and glassy effects
+*/
+
+@layer base {
+  :root {
+    /* Cloud Bubble Background - Soft Classroom Wall */
+    --background: 215 40% 96%;
+    --foreground: 220 18% 20%;
+    
+    /* Cloud Bubble Surfaces - Glassy White/Cream */
+    --surface: 210 30% 98%;
+    --surface-variant: 220 25% 95%;
+
+    /* Card System - Paper-like Bubble Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 220 18% 20%;
+    --card-elevated: 210 20% 99%;
+
+    /* Popover & Modal Surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 18% 20%;
+
+    /* Primary - Calm Blue for Focus */
+    --primary: 210 70% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 70% 52%;
+    --primary-light: 210 70% 90%;
+    --primary-glow: 210 70% 65%;
+
+    /* Secondary - Soft Green for Success/Next */
+    --secondary: 150 45% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 150 45% 48%;
+    --secondary-light: 150 45% 88%;
+
+    /* Accent - Soft Lavender */
+    --accent: 260 35% 85%;
+    --accent-foreground: 260 35% 30%;
+    --accent-hover: 260 35% 80%;
+
+    /* Neutral Tones - Soft and Calm */
+    --muted: 220 20% 93%;
+    --muted-foreground: 220 15% 50%;
+    --muted-hover: 220 20% 90%;
+
+    /* Status Colors */
+    --success: 150 50% 50%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 85% 60%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Input & Border System */
+    --border: 220 20% 88%;
+    --input: 220 20% 92%;
+    --input-focus: 210 70% 58%;
+    --ring: 210 70% 58%;
+
+    /* Cloud Bubble Border Radius */
+    --radius: 1.25rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.75rem;
+    --radius-xl: 2.5rem;
+
+    /* Glassy Shadows & Elevation */
+    --shadow-sm: 0 2px 8px 0 hsl(210 50% 50% / 0.08);
+    --shadow: 0 4px 12px 0 hsl(210 50% 50% / 0.12);
+    --shadow-md: 0 8px 20px 0 hsl(210 50% 50% / 0.15);
+    --shadow-lg: 0 12px 30px 0 hsl(210 50% 50% / 0.18);
+    --shadow-xl: 0 20px 40px 0 hsl(210 50% 50% / 0.22);
+    --shadow-cloud: 0 8px 32px 0 hsl(210 60% 60% / 0.15);
+
+    /* Assessment Bubble Colors */
+    --bubble-top: 210 30% 98%;
+    --bubble-main: 0 0% 100%;
+    --bubble-passage: 0 0% 100%;
+    --bubble-question: 210 20% 99%;
+    --answer-hover: 210 60% 95%;
+    --answer-selected: 210 70% 92%;
+    --question-nav-answered: 150 45% 88%;
+    --question-nav-unanswered: 220 20% 93%;
+
+    /* Material Design Typography Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Dark Mode - Darker Cloud Bubbles */
+    --background: 220 20% 10%;
+    --foreground: 220 15% 90%;
+    --surface: 220 18% 14%;
+    --surface-variant: 220 18% 18%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 220 15% 90%;
+    --card-elevated: 220 18% 16%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 210 70% 65%;
+    --primary-foreground: 220 20% 10%;
+    --primary-hover: 210 70% 70%;
+    --primary-light: 210 70% 25%;
+
+    --secondary: 150 45% 60%;
+    --secondary-foreground: 220 20% 10%;
+    --secondary-hover: 150 45% 65%;
+    --secondary-light: 150 45% 25%;
+
+    --accent: 260 35% 30%;
+    --accent-foreground: 260 35% 85%;
+    
+    --muted: 220 18% 18%;
+    --muted-foreground: 220 15% 65%;
+    --muted-hover: 220 18% 22%;
+
+    --success: 150 50% 55%;
+    --warning: 38 85% 65%;
+    --destructive: 0 70% 65%;
+
+    --border: 220 18% 25%;
+    --input: 220 18% 18%;
+    --input-focus: 210 70% 65%;
+    --ring: 210 70% 65%;
+
+    --bubble-top: 220 18% 14%;
+    --bubble-main: 220 18% 14%;
+    --bubble-passage: 220 18% 16%;
+    --bubble-question: 220 18% 15%;
+    --answer-hover: 210 60% 20%;
+    --answer-selected: 210 70% 25%;
+    --question-nav-answered: 150 45% 25%;
+    --question-nav-unanswered: 220 18% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Material Design Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight;
+  }
+
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+  h6 { @apply text-base; }
+}
+
+@layer components {
+  /* Cloud Bubble Components */
+  .cloud-bubble {
+    @apply bg-card rounded-[1.75rem] shadow-cloud backdrop-blur-sm 
+           border border-white/40 transition-all duration-300;
+  }
+
+  .cloud-bubble-top {
+    background-color: hsl(var(--bubble-top) / 0.8);
+    @apply backdrop-blur-md rounded-[2rem] shadow-lg border border-white/50;
+  }
+
+  .cloud-bubble-main {
+    @apply bg-bubble-main rounded-[1.75rem] shadow-xl border border-border/50;
+  }
+
+  .passage-bubble {
+    @apply bg-bubble-passage rounded-2xl shadow-md p-6 
+           border border-border/30 h-full overflow-y-auto;
+  }
+
+  .question-bubble {
+    @apply bg-bubble-question rounded-2xl shadow-md p-6 
+           border border-border/30;
+  }
+
+  /* Question Navigation Bubbles */
+  .question-nav-bubble {
+    @apply w-10 h-10 rounded-full flex items-center justify-center 
+           font-medium text-sm transition-all duration-200 cursor-pointer
+           border-2 border-transparent;
+  }
+
+  .question-nav-bubble.answered {
+    @apply bg-question-nav-answered text-success border-success/30;
+  }
+
+  .question-nav-bubble.unanswered {
+    @apply bg-question-nav-unanswered text-muted-foreground;
+  }
+
+  .question-nav-bubble.active {
+    @apply bg-primary text-white ring-2 ring-primary/30 ring-offset-2;
+  }
+
+  /* Answer Card Bubbles */
+  .answer-card {
+    @apply flex items-start gap-3 p-4 rounded-xl border-2 border-border
+           transition-all duration-200 cursor-pointer
+           hover:border-primary/40 hover:bg-answer-hover hover:shadow-md;
+  }
+
+  .answer-card.selected {
+    @apply bg-answer-selected border-primary shadow-md;
+  }
+
+  /* Navigation Buttons */
+  .nav-btn {
+    @apply px-8 py-3 rounded-xl font-medium transition-all duration-200
+           shadow-md hover:shadow-lg focus:outline-none focus:ring-2 
+           focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .nav-btn-prev {
+    @apply nav-btn bg-muted text-foreground hover:bg-muted-hover focus:ring-muted;
+  }
+
+  .nav-btn-next {
+    @apply nav-btn bg-secondary text-secondary-foreground 
+           hover:bg-secondary-hover focus:ring-secondary;
+  }
+
+  /* Glassy Input Fields */
+  .input-glassy {
+    @apply bg-white/60 backdrop-blur-sm border-2 border-border/50
+           rounded-xl px-4 py-2.5 transition-all duration-200
+           focus:border-primary focus:bg-white focus:shadow-md
+           placeholder:text-muted-foreground/60;
+  }
+
+  /* Professional Cards */
+  .stat-card {
+    @apply bg-card rounded-2xl p-6 shadow-md border border-border/30
+           hover:shadow-lg transition-all duration-200;
+  }
+}
